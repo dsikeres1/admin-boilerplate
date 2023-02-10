@@ -1,5 +1,5 @@
 import { AppProps } from "next/app";
-import { DefaultLayoutView } from "./view/layout/layout";
+import { DefaultLayoutView, LayoutView } from "./view/layout/layout";
 import { PropsWithChildren, useEffect } from "react";
 import Router, { useRouter } from "next/router";
 import { some } from "lodash";
@@ -31,7 +31,7 @@ function LayoutSelector(props: PropsWithChildren) {
 }
 
 const AdminApp = observer((props: PropsWithChildren<Record<never, any>>) => {
-  return <DefaultLayoutView>{props.children}</DefaultLayoutView>;
+  return <LayoutView>{props.children}</LayoutView>;
 });
 
 export function Replace(props: { url: UrlObject | string }) {

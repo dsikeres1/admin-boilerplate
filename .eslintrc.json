@@ -165,7 +165,9 @@
     "space-before-function-paren": 0,
     "react/jsx-curly-newline": 0,
     // import 순서 제거
-    "import/order": 0
+    "import/order": 0,
+    "import/no-extraneous-dependencies": 0,
+    "no-useless-return": 0
   },
   "settings": {
     "import/resolver": {
