@@ -1,6 +1,10 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css";
+import type { AppProps, AppType } from "next/app";
+import { App } from "../app";
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+const NextApp: AppType = (props: AppProps) => <App {...props} />;
+// SSR 은 사용하지 않는다.
+// https://nextjs.org/docs/advanced-features/custom-app#caveats
+NextApp.getInitialProps = () => ({});
+// noinspection JSUnusedGlobalSymbols
+export default NextApp;

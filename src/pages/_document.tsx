@@ -1,13 +1,15 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Head, Html, Main, NextScript } from "next/document";
 
+// noinspection JSUnusedGlobalSymbols
 export default function Document() {
+  // noinspection HtmlRequiredTitleElement
   return (
-    <Html lang="en">
+    <Html>
       <Head />
-      <body>
+      <body data-leftbar-theme="dark">
         <Main />
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }
